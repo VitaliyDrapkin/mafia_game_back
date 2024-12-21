@@ -9,15 +9,10 @@ import networkConfig from '@src/config/network.config';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: [
-        '.env',
-        'development.local.env',
-        'production.env',
-        'dev.env',
-      ],
+      envFilePath: ['.env', 'production.env', 'dev.env'],
       load: [appConfig, databaseConfig, networkConfig],
       validationSchema: Joi.object({
-        PORT: Joi.number().port().default(4000),
+        PORT: Joi.number().port().default(4200),
         SALT: Joi.number().integer().positive().required(),
         DATABASE_HOST: Joi.string().hostname().required(),
         DATABASE_PORT: Joi.number().port().required(),
