@@ -1,0 +1,42 @@
+[
+  {
+    "gameId": 1,
+    "playerId": 1
+  },
+  {
+    "gameId": 1,
+    "playerId": 2
+  },
+  {
+    "gameId": 1,
+    "playerId": 3
+  },
+  {
+    "gameId": 1,
+    "playerId": 4
+  },
+  {
+    "gameId": 1,
+    "playerId": 5
+  },
+  {
+    "gameId": 1,
+    "playerId": 6
+  },
+  {
+    "gameId": 1,
+    "playerId": 7
+  },
+  {
+    "gameId": 1,
+    "playerId": 8
+  },
+  {
+    "gameId": 1,
+    "playerId": 9
+  },
+  {
+    "gameId": 1,
+    "playerId": 10
+  }
+]

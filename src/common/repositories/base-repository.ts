@@ -93,12 +93,12 @@ export abstract class BaseRepository<T extends { id: number }, F> {
    * when you want to aggregate multiple query parameters into a single filter
    * or rename keys for consistency in your processing logic.
    *
-   * For user, you might have multiple query parameters like `start_date` and
+   * For player, you might have multiple query parameters like `start_date` and
    * `end_date` that should be combined into a single `dateRange` key in the final
    * filter object. After the transformation, you can use this combined key in
    * `filterStrategies` to define how to handle such cases.
    *
-   * UserDto transformation:
+   * GameDto transformation:
    * ```
    * [
    *   { keys: ['start_date', 'end_date'], newKey: 'dateRange' },
@@ -106,7 +106,7 @@ export abstract class BaseRepository<T extends { id: number }, F> {
    * ]
    * ```
    *
-   * UserDto usage in `filterStrategies`:
+   * GameDto usage in `filterStrategies`:
    * ```
    * dateRange: (value: { start: Date; end: Date }) => ({
    *   start_date: LessThanOrEqual(value.end),
@@ -177,13 +177,13 @@ export abstract class BaseRepository<T extends { id: number }, F> {
 
   /**
    * Creates filter strategies.
-   * UserDto:
+   * GameDto:
    *
    * {
    *   query_key: (query_value) => ({ db_column: filter_condition })
    * }
    *
-   * UserDto for a specific entity:
+   * GameDto for a specific entity:
    *
    * {
    *   full_name: (value) => ({ full_name: Like(`%${value}%`) })
@@ -191,11 +191,11 @@ export abstract class BaseRepository<T extends { id: number }, F> {
    *
    * Here:
    * - `query_key` — the key from the request (e.g., the parameter passed in the query),
-   * - `query_value` — the value that the user provides for the filter,
+   * - `query_value` — the value that the player provides for the filter,
    * - `db_column` — the column in the database that is being filtered,
    * - `filter_condition` — the condition applied to the column for filtering (usually matches `query_value`, but can be transformed).
    *
-   * A concrete user:
+   * A concrete player:
    * - If the request contains a filter for `full_name`, it will be converted into a `Like` query to search for partial matches.
    * - For instance, the query `?full_name=John` will return all users whose names contain "John" (e.g., "John Doe", "Johnny").
    */
@@ -211,11 +211,11 @@ export abstract class BaseRepository<T extends { id: number }, F> {
    *
    * Each string corresponds to the name of a relation defined in the entity.
    * When implementing this method in a subclass, you should specify which
-   * relations (like `user`, `posts`, `comments`, etc.) to load along with the entity.
+   * relations (like `player`, `posts`, `comments`, etc.) to load along with the entity.
    *
-   * UserDto:
-   * - If the entity has relations such as `user` and `comments`,
-   *   the implementation might return: `['user', 'comments']`.
+   * GameDto:
+   * - If the entity has relations such as `player` and `comments`,
+   *   the implementation might return: `['player', 'comments']`.
    *
    * @returns An array of strings, each representing a relation to be included in the query.
    */

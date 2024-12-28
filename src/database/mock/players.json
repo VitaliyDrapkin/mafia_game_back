@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "nickname": "Casper",
+    "fullName": "Vitaliy Drapkin",
+    "avatarUrl": "'https://storage.googleapis.com/mwt/files/uploads/avatars/user_19345/6ce63d10edafdf19a36079e6dbf42f194d3f2e1f.png'"
+  },
+  {
+    "id": 2,
+    "nickname": "Kiwi",
+    "fullName": "Valeria Furman"
+  },
+  {
+    "id": 3,
+    "nickname": "Айвенго",
+    "fullName": "Али"
+  },
+  {
+    "id": 4,
+    "nickname": "Chili",
+    "fullName": "Инна"
+  },
+  {
+    "id": 5,
+    "nickname": "Олег",
+    "fullName": "Олег"
+  },
+  {
+    "id": 6,
+    "nickname": "Айрат",
+    "fullName": "Ваня"
+  },
+  {
+    "id": 7,
+    "nickname": "Мегамаг",
+    "fullName": "Сергей"
+  },
+  {
+    "id": 8,
+    "nickname": "Taktik",
+    "fullName": "Женя"
+  },
+  {
+    "id": 9,
+    "nickname": "Кура",
+    "fullName": "Кура куревич"
+  },
+  {
+    "id": 10,
+    "nickname": "Печка",
+    "fullName": "Просто печка"
+  }
+]

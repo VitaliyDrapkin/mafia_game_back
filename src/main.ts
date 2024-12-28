@@ -12,7 +12,7 @@ function setGlobalPipes(app) {
     new ValidationPipe({
       // Show error messages
       disableErrorMessages: false,
-      // If user send extra data from the dto the data will be stripped
+      // If player send extra data from the dto the data will be stripped
       whitelist: false,
       // To enable auto-transformation, set transform to true
       transform: true,
@@ -95,4 +95,5 @@ async function bootstrap() {
     `Start service ${process.env.APP_NAME}, PORT: ${port}, ENV: ${process.env.NODE_ENV}`,
   );
 }
+
 bootstrap();

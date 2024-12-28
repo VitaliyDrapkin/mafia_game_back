@@ -22,7 +22,10 @@ export class DatabaseService implements TypeOrmOptionsFactory {
       password: this.databaseConfigModel.password,
       database: this.databaseConfigModel.schema,
       entities: [`${__dirname}/../**/*.entity{.ts,.js}`],
-      migrations: [`${__dirname}/**/*.migration{.ts,.js}`],
+      migrations: [
+        `${__dirname}/**/*.migration{.ts,.js}`,
+        `${__dirname}/**/*.seeder{.ts,.js}`,
+      ],
       migrationsRun: true,
     };
   }

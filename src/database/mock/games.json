@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "winner": "Mafia",
+    "finished_at": "2024-12-21 22:50:00"
+  },
+  {
+    "id": 2,
+    "winner": "Civilians",
+    "finished_at": "2024-12-22 11:00:00"
+  },
+  {
+    "id": 3,
+    "winner": "Mafia",
+    "finished_at": "2024-12-23 13:00:00"
+  },
+  {
+    "id": 4,
+    "winner": null,
+    "finished_at": null
+  }
+]
