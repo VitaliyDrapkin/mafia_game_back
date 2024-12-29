@@ -1,9 +1,12 @@
-import { Column } from 'typeorm';
+import { ApiProperty } from '@nestjs/swagger';
+import { IsNumber } from 'class-validator';
 
 export class ParticipantDto {
-  @Column({ name: 'game_id' })
+  @ApiProperty({ name: 'gameId', type: Number })
+  @IsNumber()
   gameId: number;
 
-  @Column({ name: 'player_id' })
+  @ApiProperty({ name: 'playerId', type: Number })
+  @IsNumber()
   playerId: number;
 }

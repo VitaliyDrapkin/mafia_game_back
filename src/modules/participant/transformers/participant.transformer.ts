@@ -8,9 +8,7 @@ export class ParticipantTransformer {
       id: participant.id,
       gameId: participant.gameId,
       playerId: participant.playerId,
-      player:
-        participant.player &&
-        PlayerTransformer.toResponseDto(participant.player),
+      player: PlayerTransformer.toResponseDto(participant.player),
     };
   }
 }
